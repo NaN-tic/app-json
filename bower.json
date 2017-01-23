@@ -1,0 +1,21 @@
+{
+  "name": "tryton-json-helper",
+  "description": "This module helps create JSON to communicate with the AppProxy module in tryton",
+  "main": "index.js",
+  "authors": [
+    "nan-tic"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "tryton",
+    "JSON"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
