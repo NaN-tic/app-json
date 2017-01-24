@@ -17,5 +17,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+"dependencies": {
+    "repo": "hg+https://bitbucket.org/nantic/app-json"
+}
+
 }

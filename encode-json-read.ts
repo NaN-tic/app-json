@@ -42,7 +42,10 @@ export class EncodeJSONRead {
 	 * @returns {string}		String contaning the domain withour brackets
 	 */
 	createDomain(field: string, operator: string, value: any){
-		return "('" + field + "', '" + operator + "', " + value + ")"
+		if (typeof(value) == "string")
+			return "('" + field + "', '" + operator + "', '" + value + "')"
+		else
+			return "('" + field + "', '" + operator + "', " + value + ")"
 	}
 	/**
 	 * Creates the JSON object and returns it
