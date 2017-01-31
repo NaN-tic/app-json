@@ -20,7 +20,7 @@ export class EncodeJSONWrite {
 	 * @param {string} method Name of the target method
 	 * @param {Object} values Values to create or update
 	 */
-	addNode(method: string, values: any ){
+	public addNode(method: string, values: any ){
 		console.log("Adding node for method, id, values",
 			method, values);
 
@@ -34,8 +34,8 @@ export class EncodeJSONWrite {
 	 * Creates the JSON object and returns it
 	 * @returns 	JSON object
 	 */
-	createJSON(){
-		console.log("Generating JSON");		
+	public createJSON(){
+		console.log("Generating JSON");
 		console.log(JSON.stringify(this.write))
 		return JSON.stringify(this.write);
 	}
