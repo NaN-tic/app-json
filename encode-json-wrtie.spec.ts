@@ -1,9 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { async } from '@angular/core/testing';
 import {} from 'jasmine';
-import { TestUtils } from '../../test';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
 
 import { EncodeJSONWrite } from './encode-json-write'
 
