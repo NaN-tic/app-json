@@ -26,7 +26,7 @@ export class EncodeJSONRead {
 	 * @param {number}        offset Sets where to start gathering data after getting it, the default value no offset
 	 * @param {any}           limit Limits the number of data returned, default None
 	 */
-	addNode(method: string, domain: string, fields: Array<string>,
+	addNode(method: string, domain: any, fields: Array<string>,
 		offset = 0, limit:any = ''){
 		console.log("Adding node for method, domain, fields",
 			method, domain, fields)
@@ -43,9 +43,9 @@ export class EncodeJSONRead {
 	 */
 	createDomain(field: string, operator: string, value: any){
 		if (typeof(value) == "string")
-			return "('" + field + "', '" + operator + "', '" + value + "')"
+			return [field, operator, "\"" + value + "\""]
 		else
-			return "('" + field + "', '" + operator + "', " + value + ")"
+			return [field, operator, value]
 	}
 	/**
 	 * Creates the JSON object and returns it
