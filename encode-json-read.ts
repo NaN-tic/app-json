@@ -43,7 +43,7 @@ export class EncodeJSONRead {
 	 */
 	createDomain(field: string, operator: string, value: any){
 		if (typeof(value) == "string")
-			return [field, operator, "\"" + value + "\""]
+			return [field, operator, value]
 		else
 			return [field, operator, value]
 	}
