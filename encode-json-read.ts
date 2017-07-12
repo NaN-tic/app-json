@@ -39,13 +39,13 @@ export class EncodeJSONRead {
 	 * @param {string} field    Name of the field
 	 * @param {string} operator Operator: =, >, <, in, like...
 	 * @param {any}    value    Value to compare
+	 * @param {string} related  Used for reference fields search
 	 * @returns {string}		String contaning the domain withour brackets
 	 */
-	createDomain(field: string, operator: string, value: any){
-		if (typeof(value) == "string")
-			return [field, operator, value]
-		else
-			return [field, operator, value]
+	createDomain(field: string, operator: string, value: any, related?: string){
+		if (related)
+			return [field, operator, value, related]
+		return [field, operator, value]
 	}
 	/**
 	 * Creates the JSON object and returns it
